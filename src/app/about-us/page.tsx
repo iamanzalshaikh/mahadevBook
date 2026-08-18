@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "About Us – Mahadev Book | India's Trusted Betting Platform",
@@ -16,6 +17,21 @@ export const metadata: Metadata = {
       "Mahadev Book is India's leading online gaming platform with 1M+ active users. Secure, fast, and transparent betting since 2015.",
     url: "https://mahadevbooks.today/about-us",
     type: "website",
+    images: [
+      {
+        url: "https://mahadevbooks.today/wp-content/uploads/2026/05/Hero-Page.png",
+        width: 1983,
+        height: 793,
+        alt: "About Us – Mahadev Book",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us – Mahadev Book | India's Trusted Betting Platform",
+    description:
+      "Mahadev Book is India's leading online gaming platform with 1M+ active users. Secure, fast, and transparent betting since 2015.",
+    images: ["https://mahadevbooks.today/wp-content/uploads/2026/05/Hero-Page.png"],
   },
 };
 
@@ -23,7 +39,13 @@ export default function AboutUs() {
   return (
     <>
       <Header />
-      <main className="bg-black text-white py-12 md:py-20 px-4 sm:px-6 lg:px-8">
+      <Breadcrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "About Us" },
+        ]}
+      />
+      <main className="bg-black text-white py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-12">
           {/* Main Title */}
           <div className="space-y-4">

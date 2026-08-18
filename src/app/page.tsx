@@ -20,9 +20,9 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "Mahadev Book",
   url: "https://mahadevbooks.today",
-  logo: "https://mahadevbooks.today/wp-content/uploads/2026/05/Hero-Page.png",
+  logo: "https://mahadevbooks.today/wp-content/uploads/2025/05/cropped-mahadev-book-logo-120x40.png",
   description:
-    "India's #1 Online Cricket ID provider. Get Mahadev Book ID, live betting, fantasy sports, and 24/7 customer support since 2015.",
+    "Mahadev Book is a secure online cricket ID and sports betting platform offering live betting, fantasy sports, and 24/7 customer support.",
   foundingDate: "2015",
   areaServed: "IN",
   contactPoint: {
@@ -30,7 +30,12 @@ const organizationJsonLd = {
     contactType: "customer support",
     availableLanguage: ["English", "Hindi"],
   },
-  sameAs: [],
+  sameAs: [
+    "https://www.facebook.com/mahadevbookss/",
+    "https://www.instagram.com/mahadevbookss/",
+    "https://x.com/mahadevbookidd",
+    "https://www.youtube.com/@mahadevbooksid",
+  ],
 };
 
 const homeFaqJsonLd = {
@@ -108,10 +113,10 @@ export default function Home() {
             {/* Left */}
             <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
               <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-gold leading-tight tracking-wide uppercase">
-                India’s Trusted Platform for Mahadev Book ID &amp; App Access
+                Mahadev Book Official – Online Cricket ID & Sports Betting Platform
               </h1>
               <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                Welcome to <strong className="text-gold font-bold">Mahadev Book</strong>, your trusted source for information on Mahadev Book ID, Mahadev Book login, and app access. Secure login features, quick registration guidance and smooth mobile-friendly experience all in one place. From fantasy cricket to live casino games, real-time sports betting to instant withdrawals, we bring the most complete and user-friendly betting environment to your fingertips. Whether you&apos;re a beginner or a seasoned gamer, <strong className="text-gold font-bold">Mahadev Book ID</strong> gives you access to a premium betting experience with advanced technology, real-time odds, and unbeatable promotions.
+                Welcome to <strong className="text-gold font-bold">Mahadev Book</strong>, the premier platform for online sports betting and cricket IDs. We provide a secure, fast, and user-friendly environment for betting on your favorite events. Get started today with our seamless registration process.
               </p>
               <div className="pt-2">
                 <a
@@ -327,18 +332,24 @@ export default function Home() {
               {[
                 {
                   title: "Cricket :",
-                  desc: "Mahadev Book offers cricket coverage for IPL, T20, ODI, and Test matches with live updates, match insights, and a smooth user experience for cricket fans worldwide.",
+                  desc: "Mahadev Book covers IPL, T20, ODI, and Test matches with live updates, match insights, and a smooth user experience for cricket fans.",
                   img: "https://mahadevbooks.today/wp-content/uploads/2025/05/cricket-1.png",
+                  link: "/cricket-betting-guide",
+                  linkText: "Cricket Betting Guide",
                 },
                 {
                   title: "Football :",
-                  desc: "Enjoy football coverage from top international leagues including EPL, La Liga, and UEFA tournaments with live scores and real-time updates on Mahadev Book.",
+                  desc: "Enjoy football coverage from top international leagues including EPL, La Liga, and UEFA tournaments with live scores and real-time updates.",
                   img: "https://mahadevbooks.today/wp-content/uploads/2025/05/cricket-1.png",
+                  link: null,
+                  linkText: null,
                 },
                 {
                   title: "Tennis :",
                   desc: "From Grand Slam tournaments to ATP events, Mahadev Book keeps users updated with live tennis action, match statistics, and fast-paced game information.",
                   img: "https://mahadevbooks.today/wp-content/uploads/2025/05/tennis.png",
+                  link: null,
+                  linkText: null,
                 },
               ].map((sport, i) => (
                 <div key={i} className="border border-gold rounded-2xl p-8 bg-black text-center flex flex-col items-center space-y-5">
@@ -347,6 +358,11 @@ export default function Home() {
                   </div>
                   <h3 className="text-white font-bold text-xl font-heading">{sport.title}</h3>
                   <p className="text-gray-300 text-sm md:text-base leading-relaxed">{sport.desc}</p>
+                  {sport.link && (
+                    <a href={sport.link} className="text-gold text-sm font-semibold hover:underline">
+                      {sport.linkText} &rarr;
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
@@ -623,6 +639,11 @@ export default function Home() {
 
           <FAQAccordion />
         </section>
+
+        {/* Last Updated – E-E-A-T signal */}
+        <p className="text-center text-xs text-gray-600 pb-4">
+          Last updated: August 2026 &nbsp;|&nbsp; <a href="/responsible-gaming" className="hover:text-gold underline">Responsible Gaming</a> &nbsp;|&nbsp; 18+ Only
+        </p>
       </main>
 
       <Footer />

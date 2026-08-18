@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Privacy Policy – Mahadev Book | How We Protect Your Data",
@@ -13,9 +14,24 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Privacy Policy – Mahadev Book",
     description:
-      "Read Mahadev Book's Privacy Policy to understand how we protect your personal and financial data.",
+      "Read Mahadev Book's Privacy Policy to understand how we collect, use, and protect your personal and financial data.",
     url: "https://mahadevbooks.today/privacy-policy",
     type: "website",
+    images: [
+      {
+        url: "https://mahadevbooks.today/wp-content/uploads/2026/05/Hero-Page.png",
+        width: 1983,
+        height: 793,
+        alt: "Privacy Policy – Mahadev Book",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy – Mahadev Book",
+    description:
+      "Read Mahadev Book's Privacy Policy to understand how we collect, use, and protect your personal and financial data.",
+    images: ["https://mahadevbooks.today/wp-content/uploads/2026/05/Hero-Page.png"],
   },
 };
 
@@ -23,7 +39,13 @@ export default function PrivacyPolicy() {
   return (
     <>
       <Header />
-      <main className="bg-black text-white py-12 md:py-20 px-4 sm:px-6 lg:px-8">
+      <Breadcrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Privacy Policy" },
+        ]}
+      />
+      <main className="bg-black text-white py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Main Title */}
           <div className="space-y-4">

@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mahadevbooks.today/login",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Mahadev Book Login – Access Your Betting Account Instantly",
     description:

@@ -3,13 +3,16 @@ import Link from "next/link";
 export default function Footer() {
   const quickLinks = [
     { name: "Home", href: "/" },
-    { name: "About us", href: "/about-us" },
-    { name: "Login", href: "/login" },
-    { name: "Register", href: "/register" },
-    { name: "Online Cricket ID", href: "/online-cricket-id" },
-    { name: "Mahadev book online", href: "/mahadev-book-online" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Cricket Betting Guide", href: "/cricket-betting-guide" },
+    { name: "IPL Betting Guide", href: "/ipl-betting-guide" },
+    { name: "UPI Payment Guide", href: "/upi-payment-guide" },
+    { name: "FAQs", href: "/faqs" },
+    { name: "Responsible Gaming", href: "/responsible-gaming" },
+    { name: "Terms & Conditions", href: "/terms-and-conditions" },
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Blog", href: "/blog" },
+    { name: "Online Cricket ID", href: "/online-cricket-id" },
   ];
 
   const socialLinks = [
@@ -70,17 +73,15 @@ export default function Footer() {
               Mahadev Book
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Welcome to Mahadev Book, the best online id provider in India. Excite yourself with our
-              special online betting features for cricket, football and casino games among others.
-              Download The Mahadev Betting App Now!
+              Mahadev Book is a leading online sports betting and cricket ID platform serving users across India. Enjoy live cricket, fantasy sports, and casino games with secure UPI payments and 24/7 support.
             </p>
             <div className="pt-4 space-y-3">
-              <h4 className="text-lg font-semibold text-white">Our Locations</h4>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                United States<br />
-                Australia<br />
-                Canada<br />
-                Europe
+              <div className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 text-gold text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full">
+                <span>🔞</span> 18+ Only – Bet Responsibly
+              </div>
+              <p className="text-gray-500 text-xs leading-relaxed">
+                Gambling involves financial risk. Please play responsibly.{" "}
+                <a href="/responsible-gaming" className="text-gold hover:underline">Responsible Gaming Policy</a>.
               </p>
             </div>
           </div>
@@ -134,10 +135,16 @@ export default function Footer() {
 
         {/* Below Footer: Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between text-center sm:text-left text-sm text-gray-400 gap-4">
-          <p>Copyright © 2026 Official Mahadev Book | All Rights Reserved</p>
+          <p>Copyright © 2026 Official Mahadev Book | All Rights Reserved | 18+ Only</p>
           <div className="flex gap-6 text-xs">
             <Link href="/privacy-policy" className="hover:text-gold transition-colors">
               Privacy Policy
+            </Link>
+            <Link href="/terms-and-conditions" className="hover:text-gold transition-colors">
+              Terms &amp; Conditions
+            </Link>
+            <Link href="/responsible-gaming" className="hover:text-gold transition-colors">
+              Responsible Gaming
             </Link>
             <Link href="/about-us" className="hover:text-gold transition-colors">
               About Us

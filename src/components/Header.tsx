@@ -9,11 +9,12 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About us", href: "/about-us" },
+    { name: "About Us", href: "/about-us" },
     { name: "Blog", href: "/blog" },
+    { name: "FAQs", href: "/faqs" },
+    { name: "Responsible Gaming", href: "/responsible-gaming" },
     { name: "Login", href: "/login" },
     { name: "Register", href: "/register" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
   ];
 
   return (

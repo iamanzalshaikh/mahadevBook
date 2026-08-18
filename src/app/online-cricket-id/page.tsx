@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Online Cricket ID | Get Cricket Betting ID Instantly | Mahadev Book",
@@ -68,7 +69,13 @@ export default function OnlineCricketId() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
       />
       <Header />
-      <main className="bg-black text-white py-8 px-4 sm:px-6 lg:px-8 space-y-8">
+      <Breadcrumb
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Online Cricket ID" },
+        ]}
+      />
+      <main className="bg-black text-white py-6 px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Banner image */}
         <div className="max-w-7xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gold/20">
           <img

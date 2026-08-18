@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://mahadevbooks.today/register",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "Register on Mahadev Book – Get Your Cricket ID in 2 Minutes",
     description:
